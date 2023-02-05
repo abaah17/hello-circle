@@ -13,4 +13,5 @@ jobs:
       - checkout
       - run:
           name: "echo an env var that is part of our project"
-          command: echo $MY_ENV_VAR
+          command: |
+            echo $MY_ENV_VAR
