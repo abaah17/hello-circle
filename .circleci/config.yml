@@ -1,11 +1,5 @@
 version: 2.1
 
-workflows:
-  test-env-vars:
-    jobs:
-      - build
-      - create_infrastructure
-
 jobs:
   build:
     docker:
@@ -30,4 +24,9 @@ jobs:
               --stack-name myStack-${CIRCLE_WORKFLOW_ID:0:5} \
               --region us-east-1
 
+workflows:
+  test-env-vars:
+    jobs:
+      - build
+      - create_infrastructure
 
