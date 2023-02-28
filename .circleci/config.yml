@@ -23,7 +23,8 @@ jobs:
               --template-file template.yml \
               --stack-name myStack-$(date +%s) \
               --region us-east-1
-
+      - destroy_environment
+      
 workflows:
   test-env-vars:
     jobs:
